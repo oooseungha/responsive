@@ -1,0 +1,34 @@
+배너는 일단 세 장만 크롭했고, 혹시 몰라 영화의 전당에 있는 원본 배너 보내드리니 더 추가하실 분은 이거 잘라서 사용하시면 될 것 같아요!
+
+<원본 소스, PC 버전 비주얼메인>
+wide_banner_01.png 
+wide_banner_02.png 
+wide_banner_03.png 
+
+
+<태블릿 버전 비주얼메인>
+wide_banner_01_601.png
+wide_banner_02_601.png
+wide_banner_03_601.png
+
+
+<모바일 버전 비주얼메인>
+wide_banner_01_320.png
+wide_banner_02_320.png
+wide_banner_03_320.png
+
+
+<배너 아래 작은 배너>
+banner_01 ~ banner06.png
+
+
+<인기상영작_예매율 피그마 시안에 적어놓았습니다!>
+poster_01.png ~ poster_10.png
+
+
+<이벤트 4번 이미지>
+event04.jpg
+
+
+<시민평론단 사진_이미지 이름 변경해서 사용해주세요!>
+시민평론단오승하.jpg

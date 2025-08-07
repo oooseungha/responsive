@@ -1,0 +1,56 @@
+/* @@@@ reset @@@@ */
+
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/* img {
+  display: block;
+  width: 100%;
+  height: auto;
+} */
+.wrap_all {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+/* @@@@ font @@@@ */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  text-underline-offset: 5px;
+}
+html {
+  font-size: 16px;
+  letter-spacing: -1px;
+}
+
+
+
+/* @@@@ mediaquery @@@@ */
+@media all and (min-width: 769px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media all and (min-width: 1279px) {
+  html, body {
+    width: 1280px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+}

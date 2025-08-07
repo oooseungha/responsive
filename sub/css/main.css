@@ -1,0 +1,527 @@
+/* @@@@ command @@@@ */
+.sub_title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+}
+.sub_btn {
+  width: 120px; height: 40px;
+  background-color: white;
+  border: 1px solid #9E0E92;
+  border-radius: 50px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.sub_btn a {
+  display: block;
+  width: 120px; height: 40px;
+  color: #9E0E92;
+  line-height: 40px;
+}
+
+
+/* @@@@ btn @@@@ */
+#reviewer_01, #reviewer_02, #reviewer_03, #reviewer_04 {display: none;}
+
+
+/* @@@@ aside @@@@ */
+.aside {
+  display: none;
+}
+
+
+/* @@@@ wrap @@@@ */
+.wrap {
+  padding-left: 10px;
+}
+
+
+/* @@@@ sub_nav @@@@ */
+.sub_nav {
+  display: flex;
+  position: relative;
+  margin: 20px 0 50px 0;
+}
+.sub_nav div {
+  margin-right: 5px;
+}
+.sub_nav .home_btn {
+  position: relative;
+  top: 2.5px; left: 0;
+}
+.sub_nav div i,
+.sub_nav div span {
+  color: #555;
+  font-size: 0.8rem;
+}
+
+
+/* @@@@ criticism @@@@ */
+.criticism {
+  padding-bottom: 50px;
+}
+.criticism .criticism_info {
+  margin-bottom: 30px;
+}
+.criticism .criticism_info .sub_title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.criticism .criticism_info .criticism_info_text {
+  color: #666;
+  line-height: 1.7rem;
+}
+.criticism .reviewer {
+  display: flex;
+  overflow-x: scroll;
+}
+.criticism .reviewer::-webkit-scrollbar {
+  display: none;
+}
+.criticism .reviewer_box {
+  flex-shrink: 0;
+  width: 80%; 
+  margin-right: 20px;
+}
+.criticism .reviewer_box .reviewer_hover {
+  display: none;
+}
+.criticism .reviewer_box .reviewer_img {
+  width: 100%; 
+  margin-bottom: 10px;
+}
+.criticism .reviewer_box .reviewer_img picture img {
+  display: block;
+  width: 100%; height: auto;
+}
+.criticism .reviewer_01 .reviewer_text p:first-child,
+.criticism .reviewer_02 .reviewer_text p:first-child,
+.criticism .reviewer_03 .reviewer_text p:first-child,
+.criticism .reviewer_04 .reviewer_text p:first-child {
+  font-size: 1.5rem;
+  color: #EC008C;
+  font-weight: 500;
+  line-height: 3rem;
+}
+.criticism .reviewer_01 .reviewer_text p:first-child {
+  color: #EC008C;
+}
+.criticism .reviewer_02 .reviewer_text p:first-child {
+  color: #000248;
+}
+.criticism .reviewer_03 .reviewer_text p:first-child {
+  color: #00AEEF;
+}
+.criticism .reviewer_04 .reviewer_text p:first-child {
+  color: #9E0E92;
+}
+.criticism .reviewer_01 .reviewer_text p:last-child,
+.criticism .reviewer_02 .reviewer_text p:last-child,
+.criticism .reviewer_03 .reviewer_text p:last-child,
+.criticism .reviewer_04 .reviewer_text p:last-child {
+  line-height: 1.6rem;
+}
+.reviewer_text_wrap {
+  display: none;
+}
+
+
+/* @@@@ criticism_list @@@@ */
+.criticism_list {
+  display: flex;
+  overflow-x: scroll;
+  margin-bottom: 30px;
+}
+.criticism_list::-webkit-scrollbar {
+  display: none;
+}
+.criticism_list .criticism_box {
+  flex-shrink: 0;
+  width: 40%;
+  margin-right: 10px;
+}
+.criticism_list .criticism_box:last-child {
+  margin-right: 0;
+}
+.criticism_list .criticism_box .criticism_img {
+  width: 100%; height: 150px;
+  background-size: cover;
+}
+.criticism_list .criticism_box_01 .criticism_img {
+  background-image: url(../images/review1.jpg);
+}
+.criticism_list .criticism_box_02 .criticism_img {
+  background-image: url(../images/review2.jpg);
+}
+.criticism_list .criticism_box_03 .criticism_img {
+  background-image: url(../images/review3.jpg);
+}
+.criticism_list .criticism_box_04 .criticism_img {
+  background-image: url(../images/review4.jpg);
+}
+.criticism_list .criticism_box .criticism_text {
+  height: 135px;
+  position: relative;
+}
+.criticism_list .criticism_box .criticism_text p:first-child {
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+.criticism_list .criticism_box .criticism_text p:last-child { 
+  position: absolute;
+  left: 0; bottom: 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.8rem;
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
+
+
+/* @@@@ humanity @@@@ */
+.humanity .sub_title {
+  margin-bottom: 20px;
+}
+.humanity .humanity_box {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.humanity .humanity_box .humanity_img {
+  width: 40%; height: 150px;
+  background-size: cover;
+  background-position: center;
+  float: left;
+  margin-right: 10px;
+}
+.humanity .humanity_01 .humanity_img {background-image: url(../images/humanity1.jpg);}
+.humanity .humanity_02 .humanity_img {background-image: url(../images/humanity2.jpg);}
+.humanity .humanity_03 .humanity_img {background-image: url(../images/humanity3.jpg);}
+.humanity .humanity_04 .humanity_img {background-image: url(../images/humanity4.jpg);}
+.humanity .humanity_05 .humanity_img {background-image: url(../images/humanity5.jpg);}
+.humanity .humanity_box .humanity_title {
+  font-size: 0.9rem;
+  font-weight:500;
+}
+.humanity .humanity_box .humanity_text {
+  display: none;
+}
+.humanity .humanity_box span {
+  font-size: 0.8rem;
+  color: #666;
+  float: right;
+  position: absolute;
+  right: 0; bottom: 0;
+  margin-right: 10px;
+  padding-bottom: 10px;
+}
+
+
+/* @@@@ citizen @@@@ */
+.citizen .sub_title {
+  margin-bottom: 20px;
+}
+.citizen .citizen_box {
+  margin-bottom: 30px;
+}
+.citizen .citizen_box .citizen_img {
+  width: 100%; height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.citizen .citizen_01 .citizen_img {background-image: url(../images/citizen_01.jpg);}
+.citizen .citizen_02 .citizen_img {background-image: url(../images/citizen_02.jpeg);}
+.citizen .citizen_03 .citizen_img {background-image: url(../images/citizen_03.jpg);}
+.citizen .citizen_box .opacity_box {
+  width: 100%; height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  left: 0; bottom: 0;
+}
+.citizen .citizen_box .opacity_box span:last-child {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.citizen .citizen_box .citizen_title {
+  margin: 10px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+
+
+
+/* @@@@ mediaquery @@@@ */
+@media all and (min-width: 375px) {
+  .criticism_list .criticism_box .criticism_text {
+    height: 115px;
+  }
+}
+@media all and (min-width: 424px) {
+  .criticism_list .criticism_box .criticism_text {
+    height: 80px;
+  }
+}
+
+/* tablet */
+@media all and (min-width: 601px) and (max-width: 768px) {
+  /* humanity */
+  .humanity .humanity_box {
+    margin-bottom: 20px;
+  }
+  .humanity .humanity_box .humanity_title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .humanity .humanity_box .humanity_img {
+    width: 40%; height: 260px;
+    background-size: cover;
+    background-position: center;
+    float: left;
+    margin-right: 10px;
+  }
+  .humanity .humanity_box .humanity_text {
+    font-size: 0.8rem;
+    display: block;
+    line-height: 1.7rem;
+  }
+
+  /* citizen */
+  .citizen .citizen_wrap {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+  .citizen .citizen_wrap .citizen_box {
+    width: calc((100% / 3) - 10px);
+  }
+  .citizen .citizen_wrap .citizen_box .citizen_title {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+}
+@media all and (min-width: 601px) {
+  .sub_title {
+    text-align: left;
+  }
+  .criticism .reviewer_box {
+    flex-shrink: 0;
+    width: 40%;
+  }
+  .criticism_list .criticism_box {
+    flex-shrink: 1;
+  }
+
+
+
+}
+
+
+/* PC */
+@media all and (min-width: 769px) and (max-width: 1024px) {}
+@media all and (min-width: 769px) {
+  /* aside */
+  .aside {
+    display: block;
+    width: 200px;
+    height: 2200px;
+    border-right: 1px solid #ccc;
+    padding: 30px 0 0 10px;
+    float: left;
+    margin-right: 10px;
+    overflow: hidden;
+  }
+  .aside ul {}
+  .aside ul li {
+    line-height: 2rem;
+  }
+  .aside ul li a {}
+  .aside ul li a:hover {
+    font-weight: bold;
+  }
+  .aside ul .aside_title {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-weight: 500;
+    text-decoration: underline 2px #9E0E92;
+  }
+
+
+  /* wrap */
+  .wrap {
+    width: calc(100% - 250px);
+    float: left;
+  }
+  .wrap .sub_nav {
+    margin-top: 43px;
+  }
+
+
+  /* reviewer_btn */
+  #reviewer_01:checked ~ .criticism .reviewer_text_wrap .reviewer_01 {display: block;}
+  #reviewer_02:checked ~ .criticism .reviewer_text_wrap .reviewer_02 {display: block;}
+  #reviewer_03:checked ~ .criticism .reviewer_text_wrap .reviewer_03 {display: block;}
+  #reviewer_04:checked ~ .criticism .reviewer_text_wrap .reviewer_04 {display: block;}
+
+  /* reviewer */
+  .wrap .reviewer {
+    width: 100%; 
+  }
+  .wrap .reviewer .reviewer_box {
+    width: calc((100% / 4) - 10px); height: 276px;
+    margin-right: 10px;
+    border-radius: 15px;
+    overflow: hidden; 
+    position: relative;
+  }
+  .wrap .reviewer .reviewer_box .reviewer_hover {
+    display: block;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    left: -7px; bottom: -200px;
+    transition: 0.3s all;
+  }
+  .wrap .reviewer .reviewer_box:hover .reviewer_hover {
+    left: -7px; bottom: -80px;
+  }
+  .wrap .reviewer .reviewer_box .reviewer_hover p {
+    padding-top: 20px;
+    color: white;
+    text-align: center;
+  }
+  .wrap .reviewer .reviewer_box .reviewer_hover p:last-child {
+    padding-top: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+  .wrap .reviewer .reviewer_01 .reviewer_hover {
+    background-color: #EC008C;
+  }
+  .wrap .reviewer .reviewer_02 .reviewer_hover {
+    background-color: #000248;
+  }
+  .wrap .reviewer .reviewer_03 .reviewer_hover {
+    background-color: #00AEEF;
+  }
+  .wrap .reviewer .reviewer_04 .reviewer_hover {
+    background-color: #9E0E92;
+  }
+
+  .wrap .criticism .reviewer_text_wrap {
+    display: block;
+  }
+  .wrap .criticism .reviewer_text_wrap .reviewer_text_box {
+    display: none;
+  }
+  .wrap .criticism .reviewer_text_wrap .reviewer_text_box p:first-child {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  .wrap .criticism .reviewer_text_wrap .reviewer_text_box p:last-child {
+    line-height: 1.8rem;
+  }
+  .wrap .criticism .reviewer_text_wrap .reviewer_01 p:first-child {
+    color: #EC008C;
+  }
+  .wrap .criticism .reviewer_text_wrap .reviewer_02 p:first-child {
+    color: #000248;
+  }
+  .wrap .criticism .reviewer_text_wrap .reviewer_03 p:first-child {
+    color: #00AEEF;
+  }
+  .wrap .criticism .reviewer_text_wrap .reviewer_04 p:first-child {
+    color: #9E0E92;
+  }
+  .wrap .criticism_list .criticism_box {
+    cursor: pointer;
+  }
+  .wrap .criticism_list .criticism_box:hover .criticism_text p:first-child {
+    font-weight: 500;
+  }
+  .wrap .criticism_list .criticism_box:hover .criticism_text p:last-child {
+    text-decoration: underline solid #ccc;
+  }
+
+  .sub_btn:hover {
+    border: 1px solid #ccc;
+  }
+  .sub_btn:hover a {
+    color: #333;
+  }
+
+
+  /* humanity */
+  .humanity {
+    width: calc(50% - 10px);
+    float: left;
+    margin-right: 20px;
+  }
+  .humanity .humanity_box {
+    cursor: pointer;
+  }
+  .humanity .humanity_box:hover .humanity_title {
+    font-weight: 500;
+    text-decoration: underline solid #ccc;
+  }
+
+  /* citizen */
+  .citizen {
+    width: calc(50% - 10px);
+    float: left;
+    cursor: pointer;
+  }
+  .citizen .citizen_box .citizen_img {
+    height: 225px;
+  }
+  .citizen .citizen_box .citizen_img .opacity_box {
+    height: 100%;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all;
+    opacity: 0;
+  }
+  .citizen .citizen_box .citizen_img .opacity_box:hover {
+    opacity: 1;
+  }
+  .citizen .citizen_box:hover .citizen_title {
+    text-decoration: underline solid #ccc;
+  }
+  .citizen .citizen_box .citizen_title:hover {
+    text-decoration: underline solid #ccc;
+  }
+
+}
+
+
+/* wide PC */
+@media all and (min-width: 1279px) {
+  .wrap .reviewer .reviewer_box {
+    width: calc((100% / 4) - 10px); height: 365px;
+  }
+  .wrap .reviewer .reviewer_box .reviewer_hover {
+    width: 270px; height: 200px;
+    left: -10px; bottom: -200px;
+  }
+  .wrap .reviewer .reviewer_box:hover .reviewer_hover {
+    left: -10px; bottom: -80px;
+  }
+
+
+
+}

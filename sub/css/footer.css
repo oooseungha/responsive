@@ -1,0 +1,307 @@
+
+.footer {}
+
+/* @@@@ footer_sns @@@@ */
+.footer_sns {
+  display: flex;
+  width: 60%;
+  margin: 0 auto 20px auto;
+}
+.footer_sns div {
+  flex-grow: 1;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.footer_sns div:last-child {
+  margin-right: 0;
+}
+.footer_sns div img {
+  width: 100%; height: auto;
+  display: block;
+} 
+
+
+/* @@@@ footer_banner @@@@ */
+.footer .footer_banner {
+  width: 100%;
+}
+.footer .footer_banner img {
+  width: 100%; height: auto;
+  display: block;
+}
+
+
+/* @@@@ footer_family @@@@ */
+.footer_family {}
+
+
+/* @@@@ footer_01 @@@@ */
+.footer_01 {
+  width: 100%;
+  background-color: #e8e8e8;
+  padding: 20px 0;
+}
+.footer_01 .footer_01-1 {
+  overflow: hidden;
+  margin: 0 10px 30px 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.footer_01 .footer_01-1 .cs_center {
+  margin-bottom: 10px;
+}
+.footer_01 .footer_01-1 .cs_center span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000248;
+}
+.footer_01 .footer_01-1 .cs_center span:nth-child(2) {
+  font-size: 1.3rem;
+  color: #666;
+}
+.footer_01 .footer_01-1 .cs_center p {
+  color: #666;
+}
+.footer_01 .footer_01-1 .cs_btn {}
+.footer_01 .footer_01-1 .cs_btn div {
+  width: 100px; height: 40px;
+  background-color: #000248;
+  float: left;
+}
+.footer_01 .footer_01-1 .cs_btn div:first-child {
+  margin-right: 10px;
+}
+.footer_01 .footer_01-1 .cs_btn div a {
+  display: block;
+  width: 100px; height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+}
+.footer_01 .footer_01-1 .cs_btn div:hover a {
+  font-weight: bold;
+}
+.footer_01 .footer_01-2 {}
+.footer_01 .footer_01-2 .footer_logo_zone {
+  display: flex;
+  justify-content: center;
+}
+.footer_01 .footer_01-2 .footer_logo_zone .footer_logo_1 {}
+.footer_01 .footer_01-2 .footer_logo_zone .footer_logo_2 {
+  display: none;
+}
+
+
+/* @@@@ footer_02 @@@@ */
+.footer_02 {
+  background-color: #e8e8e8;
+}
+.footer_02 .footer_02-1 {
+  margin: 0 10px;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+.footer_02 .footer_02-1 li {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #666;
+}
+.footer_02 .footer_02-1 li a {
+  color: #666;
+}
+.footer_02 .footer_02-1 li a:hover {
+  font-weight: 500;
+  text-decoration: underline solid #666;
+}
+.footer_02 .footer_02-1 .footer_contents {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000248;
+}
+.footer_02 .footer_02-2 {
+  padding-top: 20px;
+}
+.footer_02 .footer_02-2 .footer_btn {
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.footer_02 .footer_02-2 .footer_btn li {
+  font-size: 0;
+  line-height: 2rem;
+}
+.footer_02 .footer_02-2 .footer_btn li:nth-child(3),
+.footer_02 .footer_02-2 .footer_btn li:last-child {
+  border: none;
+}
+.footer_02 .footer_02-2 .footer_btn li a {
+  font-size: 0.8rem;
+  padding: 2px;
+  color: #666;
+}
+.footer_02 .footer_02-2 .footer_btn li:hover a {
+  font-weight: 500;
+}
+.footer_02 .footer_02-2 .footer_info {}
+.footer_02 .footer_02-2 .footer_info p {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+}
+.footer_02 .footer_02-2 .footer_info p a {
+  color: #333;
+}
+.footer_02 .footer_02-2 .footer_info .alert {
+  text-align: right;
+  color: #999;
+  font-weight: 500;
+}
+
+
+/* @@@@ quick_menu @@@@ */
+.quick_menu {
+  float: right;
+  display: flex;
+  position: fixed;
+  right: 10px; bottom: 10px;
+}
+.quick_menu .ticket_btn {
+  width: 100px; height: 50px;
+  background-color: #9E0E92;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+.quick_menu .top_btn {
+  width: 50px; height: 50px;
+  margin-left: 5px;
+}
+.quick_menu .top_btn img {
+  display: block;
+  width: 100%; height: auto;
+}
+
+
+/* @@@@ mediaquery @@@@ */
+/* tablet */
+@media all and (min-width: 601px) and (max-width: 768px) {}
+@media all and (min-width: 601px) {
+
+  .footer_01 .footer_01-1 .cs_center span {
+    font-size: 1.7rem;
+  }
+  .footer_01 .footer_01-1 .cs_center p {
+    font-size: 1.2rem;
+  }
+  .footer_01 .footer_01-1 .cs_btn div {
+    width: 120px; height: 50px;
+  }
+  .footer_01 .footer_01-1 .cs_btn div a {
+    width: 120px; height: 50px;
+    font-size: 1.2rem;
+    line-height: 50px;
+  }
+  .footer_02 .footer_02-1 .footer_contents {
+    font-size: 1.7rem;
+  }
+  .footer_02 .footer_02-1 li a {
+    font-size: 1.2rem;
+  }
+  .footer_02 .footer_02-2 .footer_btn li a {
+    font-size: 1.2rem;
+    padding: 2px;
+    color: #666;
+  }
+  .footer_02 .footer_02-2 .footer_info p {
+  font-size: 1.2rem;
+  }
+  .quicke_menu {
+    right: 10px; bottom: 30px;
+  }
+
+
+}
+/* PC */
+@media all and (min-width: 769px) and (max-width: 1024px) {}
+@media all and (min-width: 769px) {
+  .footer {}
+  .footer .footer_sns {
+    width: 20%;
+    margin: 100px auto;
+  }
+  .footer_01 {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0;
+  }
+  .footer_01 .footer_01-1 {
+    float: left;
+    border: none;
+  }
+  .footer_01 .footer_01-2 {
+    float: right;
+  }
+  .footer_01 .footer_01-2 .footer_logo_zone {
+    width: 210px;
+    display: block;
+    float: right;
+    margin: 20px 20px 0 0;
+  }
+  .footer_01 .footer_01-2 .footer_logo_zone .footer_logo_1 {
+    width: 210px; height: 50px;
+    margin-bottom: 20px;
+  }
+  .footer_01 .footer_01-2 .footer_logo_zone .footer_logo_2 {
+    display: block;
+    width: 210px; height: 40px;
+  }
+  .footer_01 .footer_01-2 .footer_logo_zone .footer_logo_1 img,
+  .footer_01 .footer_01-2 .footer_logo_zone .footer_logo_2 img {
+    display: block;
+    width: 100%; height: auto;
+  }
+  .footer_02 {
+    display: flex;
+    padding-bottom: 50px;
+  }
+  .footer_02-1 {
+    width: 40%;
+  }
+  .footer_02-2 {
+    width: 60%;
+    padding-right: 10px;
+  }
+  .footer_02 .footer_02-1 {
+    border-bottom: none;
+  }
+  .footer_02 .footer_02-1 li a {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  .footer_02 .footer_02-2 .footer_btn {
+    justify-content: right;
+  }
+  .footer_02 .footer_02-2 .footer_info p {
+    font-size: 1rem;
+    text-align: right;
+  }
+  .quick_menu .ticket_btn {
+    width: 130px; height: 70px;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 70px;
+  }
+  .quick_menu .top_btn {
+    width: 70px; height: 70px;
+    margin-left: 5px;
+  }
+
+
+}
