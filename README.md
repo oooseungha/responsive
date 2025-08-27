@@ -202,14 +202,10 @@ callCalandar(); // 초기 달력 호출
   });
 ```
 ![Image](https://github.com/user-attachments/assets/e90ec7dd-f80b-401e-8028-42ca7345daf9)
-
-
 <br/><br/>
-
 
 ### ✅ 코드 리뷰 요약
 - Gnb 메뉴 hover, 달력 생성 및 날짜 선택 기능을 구현하며 UI/UX 향상을 목표로 개발
 - jQuery와 순수 JS를 활용해 동적 DOM 제어 및 이벤트 처리 구현
 - 프로젝트를 통해 반응형 설계 및 사용자 인터랙션 처리 경험 확보
-
 <br/><br/>
