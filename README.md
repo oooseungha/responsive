@@ -21,7 +21,6 @@ media-query 활용 반응형 웹사이트 제작
 ### 💡 기획의도
 **문제점**
 - 회원만이 이용할 수 있는 불친절한 내비게이션 서비스와 복잡한 레이아웃과 정보구조 구성 리뉴얼
-- 모든 사용자에게 열려있는 서비스  
 
 **개선 방향**
 - 다양한 이미지와 와이드 배너, 애니메이션을 적절히 활용해 다이나믹한 웹페이지 제작  
@@ -83,7 +82,7 @@ $(function () {
 ![Image](https://github.com/user-attachments/assets/ff175ee5-9611-4645-9f7f-6eebf4a5a90d)
 
 <br/><br/>
-(2) 캘린더 구현
+(2) 캘린더 구현 및 제어
 - 현재 연도와 월, 일을 호출해 달력 생성
 
 ```javaScript
@@ -155,8 +154,62 @@ const callCalandar = () => {
 
   // 4. 달력 ul에 HTML 문자열 적용
   dateList.innerHTML = dateText;
+};
+
+// ✔️ 캘린더 월 이동 버튼 이벤트
+calandarIcon.forEach((icon) => {
+  icon.addEventListener('click', () => {
+    if (icon.classList.contains('month_btn_left')) {
+      nowMonth -= 1;
+      if (nowMonth < 0) {
+        nowMonth = 11;
+      } // 이전 달로 이동, 0월보다 작아지면 12월로 돌아가기
+    } else if (icon.classList.contains('month_btn_right')) {
+      nowMonth += 1;
+      if (nowMonth > 11) {
+        nowMonth = 0;
+      } // 다음 달로 이동, 11월보다 커지면 1월로 돌아가기
+    }
+    callCalandar(); // 변경된 달 기준 달력 재호출
+  });
+});
+
+callCalandar(); // 초기 달력 호출
 
 ```
 
+- 날짜 선택 시 해당 날짜와 요일에 하이라이트 이벤트 처리
+
+```javaScript
+// jQuery
+
+  const calandarDay = $('.calandar_wrap .date_list .day li');
+
+    $('.calandar_wrap .date_list .date').on('click', 'li', function (e) {
+    e.preventDefault();
+
+    // 모든 날짜 하이라이트 비활성화
+    $('.calandar_wrap .date_list .date li').removeClass('date_on');
+    // 클릭한 날짜 하이라이트 활성화
+    $(this).addClass('date_on');
+
+    // 클릭한 날짜의 요일 계산
+    let index = $(this).index() % 7;
+    // 모든 요일 비활성화
+    calandarDay.removeClass('day_on');
+    // 해당 요일 활성화
+    calandarDay.eq(index).addClass('day_on');
+  });
+```
+![Image](https://github.com/user-attachments/assets/e90ec7dd-f80b-401e-8028-42ca7345daf9)
+
+
 <br/><br/>
 
+
+### ✅ 코드 리뷰 요약
+- Gnb 메뉴 hover, 달력 생성 및 날짜 선택 기능을 구현하며 UI/UX 향상을 목표로 개발
+- jQuery와 순수 JS를 활용해 동적 DOM 제어 및 이벤트 처리 구현
+- 프로젝트를 통해 반응형 설계 및 사용자 인터랙션 처리 경험 확보
+
+<br/><br/>
