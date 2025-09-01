@@ -35,8 +35,7 @@ media-query 활용 반응형 웹사이트 제작
 <br/><br/>
 
 ### 🛠️ 코드 리뷰
-(1) Gnb 메뉴 hover 시 메뉴 fulldown 되도록 slideDown 이벤트 구현
-- 사용자가 Gnb 메뉴 위에 마우스를 올리면 .menu_box가 내려오고, 마우스를 떼면 다시 올라가도록 구현
+## (1) Gnb 메뉴 hover 시 메뉴 슬라이드 이벤트 구현
 - jQuery slideDown/slideUp 메서드를 사용해 부드러운 애니메이션 처리
 
 ```javaScript
@@ -47,112 +46,82 @@ $(function () {
   let gnbMenu = $('.PC_header .PC_header_02 .menu_box');
 
   gnbBtn.mouseover(function () {
-    gnbMenu.stop().slideDown(300); // 마우스 hover 시 메뉴 내려오기
+    gnbMenu.stop().slideDown(300);
   });
   gnbBtn.mouseout(function () {
-    gnbMenu.stop().slideUp(300); // 마우스 hover 시 메뉴 올라가며 숨기기
+    gnbMenu.stop().slideUp(300);
   }); // @@@@ gnb_fulldown_event
 ```
-![Image](https://github.com/user-attachments/assets/ff175ee5-9611-4645-9f7f-6eebf4a5a90d)
-
 <br/><br/>
-(2) 캘린더 구현 및 제어
-- 현재 연도와 월, 일을 호출해 달력 생성
+
+## (2) 캘린더 구현 및 제어
+- today, nowYear, nowMonth로 현재 연도·월 저장, months 배열로 월 텍스트 정의
+- callCalandar 함수로 달력 생성 -> 날짜 계산 후 dateList에 HTML 적용
+- 버튼 생성하여 월 이동 (nowMonth-- / nowMonth++)
 
 ```javaScript
 // javaScript & jQuery
 
-// 오늘 기준 날짜 초기화
 let today = new Date();
 let nowYear = today.getFullYear();
 let nowMonth = today.getMonth();
 
-// 달력 표시용 월 배열 생성
 const months = ['01월', '02월', '03월', '04월', '05월', '06월', '07월', '08월', '09월', '10월', '11월', '12월'];
 
-// DOM 요소 선택
-const dateList = document.querySelector('.date'); // 달력 날짜가 들어갈 ul
-const currentMonth = document.querySelector('.month_text'); // 현재 월이 들어갈 span
-const calandarIcon = document.querySelectorAll('.calandar_btn'); // 앞뒤의 월로 전환 가능한 버튼 div
+const dateList = document.querySelector('.date');
+const currentMonth = document.querySelector('.month_text');
+const calandarIcon = document.querySelectorAll('.calandar_btn');
 
-// ✔️ 캘린더 호출 이벤트
 const callCalandar = () => {
 
   let lastDateOfMonth = new Date(nowYear, nowMonth + 1, 0).getDate();
-// 현재 달의 마지막 날짜(date) 계산
-// 1) nowMonth + 1 -> 다음 달
-// 2) day에 0 입력 -> 다음 달의 0일 = 이번 달 마지막 날
-// 3) .getDate() -> 일(date) 추출
-
   let lastDateOfLastMonth = new Date(nowYear, nowMonth, 0).getDate();
-// 지난달의 마지막 날짜(date) 계산
-// 1) nowMonth -> 현재 달
-// 2) day에 0 입력 -> 현재 달의 0일 = 지난달의 마지막 날
-// 3) .getDate() -> 일(date) 추출
-
   let firstDayOfMonth = new Date(nowYear, nowMonth, 1).getDay();
-// 현재 달의 첫 번째 요일(day) 계산
-// 1) nowMonth -> 현재 달
-// 2) day에 1 입력 -> 현재 달의 1일
-// 3) .getDate() -> 요일(day) 추출
-
   let lastDayOfMonth = new Date(nowYear, nowMonth, lastDateOfMonth).getDay();
-// 현재 달의 마지막 요일(day) 계산
-// 1) nowMonth -> 현재 달
-// 2) day에 lastDateOfMonth 입력 -> 이번 달의 마지막 날짜
-// 3) new Date(...) -> 마지막 날 날짜 객체 생성
-// 4) .getDay() -> 0(일요일) ~ 6(토요일) 형태로 요일(day) 반환
 
-
-  // 0. 달 호출: 현재 달 표시
   currentMonth.innerHTML = `${months[nowMonth]}`;
   let dateText = '';
 
-  // 1. 지난달 날짜: 이번 달 1일이 시작되기 전 남은 칸 채움
   for (let i = firstDayOfMonth; i > 0; i--) {
-    // 지난달의 마지막 날짜부터 차례대로 출력
     dateText += `<li class="date_inactive">${lastDateOfLastMonth - i + 1}</li>`;
   }
 
-  // 2. 이번달 날짜: 1일부터 마지막 날짜까지 채움
   for (let i = 1; i <= lastDateOfMonth; i++) {
-    // 달력에 현재 달 날짜 표시
     dateText += `<li><a>${i}</a></li>`;
   }
 
-  // 3. 다음달 날짜: 이번 달 마지막 요일 이후 남은 칸 채움
   for (let i = lastDayOfMonth; i < 6; i++) {
-    // 다음 달 날짜를 차례대로 표시하며 비활성화 처리
     dateText += `<li class="date_inactive">${i - lastDayOfMonth + 1}</li>`;
   }
 
-  // 4. 달력 ul에 HTML 문자열 적용
   dateList.innerHTML = dateText;
 };
 
-// ✔️ 캘린더 월 이동 버튼 이벤트
 calandarIcon.forEach((icon) => {
   icon.addEventListener('click', () => {
     if (icon.classList.contains('month_btn_left')) {
       nowMonth -= 1;
       if (nowMonth < 0) {
         nowMonth = 11;
-      } // 이전 달로 이동, 0월보다 작아지면 12월로 돌아가기
+      }
     } else if (icon.classList.contains('month_btn_right')) {
       nowMonth += 1;
       if (nowMonth > 11) {
         nowMonth = 0;
-      } // 다음 달로 이동, 11월보다 커지면 1월로 돌아가기
+      }
     }
-    callCalandar(); // 변경된 달 기준 달력 재호출
+    callCalandar();
   });
 });
 
-callCalandar(); // 초기 달력 호출
-
+callCalandar();
 ```
 
-- 날짜 선택 시 해당 날짜와 요일에 하이라이트 이벤트 처리
+<br/>
+
+## (2) 날짜 선택 시 해당 날짜와 요일에 하이라이트 이벤트 처리
+- .date 리스트 클릭 시 클릭한 날짜에 'date_on' 클래스 추가
+- 클릭한 날짜의 요일 (index % 7) 계산 후 해당 요일에 'day_on' 클래스 적용
 
 ```javaScript
 // jQuery
@@ -162,20 +131,14 @@ callCalandar(); // 초기 달력 호출
     $('.calandar_wrap .date_list .date').on('click', 'li', function (e) {
     e.preventDefault();
 
-    // 모든 날짜 하이라이트 비활성화
     $('.calandar_wrap .date_list .date li').removeClass('date_on');
-    // 클릭한 날짜 하이라이트 활성화
     $(this).addClass('date_on');
 
-    // 클릭한 날짜의 요일 계산
     let index = $(this).index() % 7;
-    // 모든 요일 비활성화
     calandarDay.removeClass('day_on');
-    // 해당 요일 활성화
     calandarDay.eq(index).addClass('day_on');
   });
 ```
-![Image](https://github.com/user-attachments/assets/e90ec7dd-f80b-401e-8028-42ca7345daf9)
 <br/><br/>
 
 ### 🔍 코드 리뷰 요약
