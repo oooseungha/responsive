@@ -36,6 +36,8 @@ media-query 활용 반응형 웹사이트 제작
 
 ### 🛠️ 코드 리뷰
 ## (1) Gnb 메뉴 hover 시 메뉴 슬라이드 이벤트 구현
+![Image](https://github.com/user-attachments/assets/bc6e1cae-83d2-48c1-afef-b2e7f83d840e)
+
 - jQuery slideDown/slideUp 메서드를 사용해 부드러운 애니메이션 처리
 
 ```javaScript
@@ -55,6 +57,8 @@ $(function () {
 <br/><br/>
 
 ## (2) 캘린더 구현 및 제어
+<img width="1324" height="584" alt="Image" src="https://github.com/user-attachments/assets/5cd6aa19-3ba3-47e5-b0a1-d3b473c30486" />
+
 - today, nowYear, nowMonth로 현재 연도·월 저장, months 배열로 월 텍스트 정의
 - callCalandar 함수로 달력 생성 -> 날짜 계산 후 dateList에 HTML 적용
 - 버튼 생성하여 월 이동 (nowMonth-- / nowMonth++)
